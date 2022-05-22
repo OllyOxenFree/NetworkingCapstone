@@ -27,7 +27,6 @@ while 1:
             connection, addr = sock.accept()
             connection.setblocking(1)
             print("New client from %s:%d" %addr)
-            connection.setblocking(0)
             readList.append(connection)
             msg_queue[connection] = queue.Queue()
         else:
